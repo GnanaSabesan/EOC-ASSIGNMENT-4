@@ -1,0 +1,33 @@
+function S=demux18(in,S2,S1,S0)
+P=NOT(in);
+x=NOT(S0);
+y=NOT(S1);
+z=NOT(S2);
+if isnumeric(x)&&isnumeric(y)&&isnumeric(z)&&isnumeric(P)
+    p=AND(z,y);
+    q=AND(p,x);
+    a=AND(in,q)
+    r=AND(z,y);
+    t=AND(r,S0);
+    b=AND(in,t)
+    u=AND(z,S1);
+     v=AND(u,x);
+    c=AND(in,v)
+    i=AND(z,S1);
+    j=AND(i,S0);
+    d=AND(in,j)
+    k=AND(S2,y);
+    l=AND(k,x);
+    e=AND(in,l)
+    m=AND(S2,y);
+    o=AND(m,S0);
+    f=AND(in,o)
+   A=AND(S2,S1);
+     B=AND(A,x);
+    g=AND(in,B)
+   C=AND(S2,S1);
+   D=AND(C,S0);
+   h=AND(in,D)
+else
+S="Invalid";
+end
